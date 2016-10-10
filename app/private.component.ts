@@ -11,6 +11,11 @@ import { AuthenticationService  } from './authentication.service'
                     <br />
                     <a (click)="logout()" href="#">Click Here to logout</a>
                 </div>
+                <div class="content">
+                    <button (click)="downloadProfile()" 
+                    class="btn waves-effect waves-light" 
+                    type="button" name="download">Download Profile</button>
+                </div>
             </div>
     	`
 })
@@ -26,5 +31,9 @@ export class PrivateComponent {
 
     logout() {
         this._service.logout();
+    }
+
+    downloadProfile() {
+        this._service.downloadProfile();
     }
 }
